@@ -68,19 +68,20 @@ var vm = new Vue({
 },{"../components/card":4,"./cache":2,"jquery":9,"masonry-layout":10,"vue":14}],4:[function(require,module,exports){
 module.exports = require('vue').extend({
   template: '<div class="grid-item">' +
-    '<div style="' +
-      'background-color: {{ card.colour }};' +
-      'width: {{ card.size.width }}px;' +
-      'height: {{ card.size.height }}px;' +
-    '"></div>' +
+    '<div v-bind:style="styleObject"></div>' +
   '</div>',
 
   props: ['card'],
-  // data: function () {
-  //   return {
-  //     message: 'Hello Vue.js!'
-  //   };
-  // },
+
+  computed: {
+    styleObject: function () {
+      return {
+        width:  this.card.size.width  + 'px',
+        height: this.card.size.height + 'px',
+        backgroundColor: this.card.colour,
+      };
+    },
+  },
 });
 
 },{"vue":14}],5:[function(require,module,exports){
