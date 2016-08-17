@@ -1,15 +1,18 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 module.exports={
-  "httpswwwflickrcomphotos42027916N005971096357": {
-    "url": "https://www.flickr.com/photos/42027916@N00/5971096357",
-    "modified": "2016-07-24 09:12:03 UTC",
-    "title": "\"IMG_1135.JPG\" by Nat W",
-    "image": "https://farm7.staticflickr.com/6012/5971096357_2f850589d7_n.jpg",
-    "size": {
-      "width": 240,
-      "height": 320
+  "httpsdribbblecomshots1895036HeDed": {
+    "url": "https://dribbble.com/shots/1895036-He-Ded",
+    "modified": "2015-01-22 09:12:03 UTC",
+    "title": "He Ded",
+    "author": {
+      "name": "Peter Komierowski",
     },
-    "colour": "#fe7766"
+    "image": "https://d13yacurqjgara.cloudfront.net/users/114736/screenshots/1895036/he-ded_1x.jpg",
+    "size": {
+      "width": 400,
+      "height": 300,
+    },
+    "colour": "#fe7766",
   }
 }
 
@@ -67,11 +70,17 @@ var vm = new Vue({
 
 },{"../components/card":4,"./cache":2,"jquery":9,"masonry-layout":10,"vue":14}],4:[function(require,module,exports){
 module.exports = require('vue').extend({
-  template: '<div class="grid-item">' +
-    '<div v-bind:style="styleObject"></div>' +
+  template: '<div class="grid-item" v-bind:style="styleObject">' +
+    '<img v-bind:src="imgSrc" class="grid-item__img" on-load="{{_imgLoaded}}" />' +
   '</div>',
 
   props: ['card'],
+
+  data: function () {
+    return {
+      imgSrc: '',
+    };
+  },
 
   computed: {
     styleObject: function () {
@@ -81,6 +90,28 @@ module.exports = require('vue').extend({
         backgroundColor: this.card.colour,
       };
     },
+  },
+
+  /**
+   * Component life cyle
+   */
+
+  attached: function () {
+    console.log('attached');
+
+    this.imgSrc = this.card.image;
+
+    // img.setAttribute('src', img.getAttribute('data-src'));
+  	// img.onload = function() {
+  	// 	img.removeAttribute('data-src');
+  	// };
+  },
+
+  /**
+   * Helper methods
+   */
+  _imgLoaded: function () {
+    console.log('Image loaded');
   },
 });
 

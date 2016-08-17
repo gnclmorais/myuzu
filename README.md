@@ -22,6 +22,12 @@ $> npm start
 - Images are daily/weekly updated into a `cache.json` file
 
 
+## What I’ve learned
+### Vue.js
+- Components look for parent data using `props` added to its tag.
+- Data can be easily passed to an array of components using `v-for='card in cards'`.
+
+
 ## Image Mosaic libraries
 - http://masonry.desandro.com/
 - http://salvattore.com/
