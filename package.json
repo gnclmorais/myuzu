@@ -23,11 +23,12 @@
   "devDependencies": {
     "browserify": "^13.0.1",
     "mocha": "^2.4.5",
+    "nib": "^1.1.2",
     "nodemon": "^1.9.2",
     "watchify": "^3.7.0"
   },
   "scripts": {
-    "watch": "watchify client/main.js -o public/app.js -v",
+    "watch": "watchify client/main.js -o public/app.js -v & stylus -w stylesheets",
     "build": "browserify client/main.js -o public/app.js",
     "start": "npm run watch & nodemon server.js"
   },

@@ -1,6 +1,6 @@
 module.exports = require('vue').extend({
-  template: '<div class="grid-item" v-bind:style="styleObject">' +
-    '<img v-bind:src="imgSrc" class="grid-item__img" on-load="{{_imgLoaded}}" />' +
+  template: '<div class="card grid-item" v-bind:style="styleObject">' +
+    '<img v-bind:src="imgSrc" v-bind:class="imgClasses" on-load="{{_imgLoaded}}" />' +
   '</div>',
 
   props: ['card'],
@@ -8,6 +8,7 @@ module.exports = require('vue').extend({
   data: function () {
     return {
       imgSrc: '',
+      imgClasses: 'card__img card__img--absent',
     };
   },
 
@@ -26,9 +27,8 @@ module.exports = require('vue').extend({
    */
 
   attached: function () {
-    console.log('attached');
-
     this.imgSrc = this.card.image;
+    this.imgClasses.replace('card__img--absent', '');
 
     // img.setAttribute('src', img.getAttribute('data-src'));
   	// img.onload = function() {
