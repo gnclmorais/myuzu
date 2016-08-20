@@ -71,7 +71,7 @@ var vm = new Vue({
 },{"../components/card":4,"./cache":2,"jquery":9,"masonry-layout":10,"vue":14}],4:[function(require,module,exports){
 module.exports = require('vue').extend({
   template: '<div class="card grid-item" v-bind:style="styleObject">' +
-    '<img v-bind:src="imgSrc" v-bind:class="imgClasses" on-load="{{_imgLoaded}}" />' +
+    '<img v-bind:src="imgSrc" v-bind:class="imgClasses" v-on:load="_imgLoaded" />' +
   '</div>',
 
   props: ['card'],
@@ -79,7 +79,10 @@ module.exports = require('vue').extend({
   data: function () {
     return {
       imgSrc: '',
-      imgClasses: 'card__img card__img--absent',
+      imgClasses: {
+        'card__img': true,
+        'card__img--absent': true,
+      },
     };
   },
 
@@ -99,19 +102,15 @@ module.exports = require('vue').extend({
 
   attached: function () {
     this.imgSrc = this.card.image;
-    this.imgClasses.replace('card__img--absent', '');
-
-    // img.setAttribute('src', img.getAttribute('data-src'));
-  	// img.onload = function() {
-  	// 	img.removeAttribute('data-src');
-  	// };
   },
 
   /**
    * Helper methods
    */
-  _imgLoaded: function () {
-    console.log('Image loaded');
+  methods: {
+    _imgLoaded: function () {
+      this.imgClasses['card__img--absent'] = false;
+    },
   },
 });
 
