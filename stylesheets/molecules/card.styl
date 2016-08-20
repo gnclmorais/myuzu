@@ -11,9 +11,12 @@
  * Card image
  */
 .card__img
-  transition opacity anim-duration-default ease
+  transition opacity anim-duration-default, transform anim-duration-fast
   width 100%
   float left
   opacity 0
+  &:hover
+    transform scale(.95)
+
 .card__img--loaded
   opacity 1

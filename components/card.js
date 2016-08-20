@@ -1,6 +1,8 @@
 module.exports = require('vue').extend({
   template: '<div class="card grid-item" :style="styleObject">' +
-    '<img :class="imgClasses" :src="imgSrc" v-on:load="_imgLoaded | debounce 100" />' +
+    '<a :href="card.url" :title="card.title">' +
+      '<img :class="imgClasses" :src="imgSrc" v-on:load="_imgLoaded | debounce 100" />' +
+    '</a>' +
   '</div>',
 
   props: ['card'],
@@ -18,8 +20,9 @@ module.exports = require('vue').extend({
   computed: {
     styleObject: function () {
       return {
-        width:  this.card.size.width  + 'px',
-        height: this.card.size.height + 'px',
+        width: '400px',
+        //width:  this.card.size.width  + 'px',
+        //height: this.card.size.height + 'px',
         backgroundColor: this.card.colour,
       };
     },

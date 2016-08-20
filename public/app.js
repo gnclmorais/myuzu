@@ -184,6 +184,7 @@ var vm = new Vue({
 $(window).on('load', function () {
   var msnry = new Masonry('.grid', {
     itemSelector: '.grid-item',
+    columnWidth: 400,
     fitWidth: true,
   });
 });
@@ -191,7 +192,9 @@ $(window).on('load', function () {
 },{"../components/card":4,"./cache":2,"jquery":9,"masonry-layout":10,"vue":14}],4:[function(require,module,exports){
 module.exports = require('vue').extend({
   template: '<div class="card grid-item" :style="styleObject">' +
-    '<img :class="imgClasses" :src="imgSrc" v-on:load="_imgLoaded | debounce 100" />' +
+    '<a :href="card.url" :title="card.title">' +
+      '<img :class="imgClasses" :src="imgSrc" v-on:load="_imgLoaded | debounce 100" />' +
+    '</a>' +
   '</div>',
 
   props: ['card'],
@@ -209,8 +212,9 @@ module.exports = require('vue').extend({
   computed: {
     styleObject: function () {
       return {
-        width:  this.card.size.width  + 'px',
-        height: this.card.size.height + 'px',
+        width: '400px',
+        //width:  this.card.size.width  + 'px',
+        //height: this.card.size.height + 'px',
         backgroundColor: this.card.colour,
       };
     },
