@@ -1,7 +1,7 @@
 module.exports = require('vue').extend({
-  template: '<div class="card grid-item" :style="styleObject">' +
+  template: '<div class="card" :style="styleObject">' +
     '<a :href="card.url" :title="card.title">' +
-      '<img :class="imgClasses" :src="imgSrc" v-on:load="_imgLoaded | debounce 100" />' +
+      '<img :class="imgClasses" :src="imgSrc" v-on:load="_imgLoaded | debounce 1000" />' +
     '</a>' +
   '</div>',
 

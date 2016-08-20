@@ -1,0 +1,41 @@
+/**
+ * Loaders
+ *
+ * From https://codepen.io/alanshortis/pen/eJLVXr
+ */
+
+@keyframes pulse
+  50%
+    background 000
+
+.loader--main
+  base-line-height = 24px
+  off-white = rgba(#000, 0.2)
+  spin-duration = 1s
+  pulse-duration = 750ms
+
+  absolute top 50% left 50%
+  width (base-line-height / 4)
+  height base-line-height
+  background off-white
+  animation pulse pulse-duration infinite
+  animation-delay (pulse-duration / 3)
+
+  &::before,
+  &::after
+    content ''
+    position absolute
+    display block
+    height (base-line-height / 1.5)
+    width (base-line-height / 4)
+    background off-white
+    top 50%
+    transform translateY(-50%)
+    animation pulse pulse-duration infinite
+
+  &::before
+    left -(base-line-height / 2)
+
+  &::after
+    left (base-line-height / 2)
+    animation-delay (pulse-duration / 1.5)

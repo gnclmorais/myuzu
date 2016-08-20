@@ -17,8 +17,15 @@ var vm = new Vue({
 
 $(window).on('load', function () {
   var msnry = new Masonry('.grid', {
-    itemSelector: '.grid-item',
+    itemSelector: '.card',
     columnWidth: 400,
     fitWidth: true,
-  });
+    transitionDuration: '0.3s',
+    initLayout: false,
+  })
+  .on('layoutComplete', function() {
+    var loading = 'grid--loading';
+    $('.' + loading).removeClass(loading);
+  })
+  .layout();
 });

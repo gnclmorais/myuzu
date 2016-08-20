@@ -30,6 +30,7 @@
   "scripts": {
     "watch": "watchify client/main.js -o public/app.js -v",
     "build": "browserify client/main.js -o public/app.js",
+    "stylus": "stylus -w stylesheets",
     "start": "npm run watch & nodemon server.js"
   },
   "repository": {
