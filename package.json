@@ -18,12 +18,12 @@
     "pug": "^2.0.0-beta4",
     "serve-favicon": "~2.3.0",
     "stylus": "0.42.3",
+    "nib": "^1.1.2",
     "vue": "^1.0.26"
   },
   "devDependencies": {
     "browserify": "^13.0.1",
     "mocha": "^2.4.5",
-    "nib": "^1.1.2",
     "nodemon": "^1.9.2",
     "watchify": "^3.7.0"
   },
