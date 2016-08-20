@@ -28,7 +28,7 @@
     "watchify": "^3.7.0"
   },
   "scripts": {
-    "watch": "watchify client/main.js -o public/app.js -v & stylus -w stylesheets",
+    "watch": "watchify client/main.js -o public/app.js -v",
     "build": "browserify client/main.js -o public/app.js",
     "start": "npm run watch & nodemon server.js"
   },

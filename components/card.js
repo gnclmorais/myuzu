@@ -1,6 +1,6 @@
 module.exports = require('vue').extend({
-  template: '<div class="card grid-item" v-bind:style="styleObject">' +
-    '<img v-bind:src="imgSrc" v-bind:class="imgClasses" v-on:load="_imgLoaded" />' +
+  template: '<div class="card grid-item" :style="styleObject">' +
+    '<img :class="imgClasses" :src="imgSrc" v-on:load="_imgLoaded | debounce 100" />' +
   '</div>',
 
   props: ['card'],
@@ -10,8 +10,8 @@ module.exports = require('vue').extend({
       imgSrc: '',
       imgClasses: {
         'card__img': true,
-        'card__img--absent': true,
-      },
+        'card__img--loaded': false,
+      }
     };
   },
 
@@ -38,7 +38,7 @@ module.exports = require('vue').extend({
    */
   methods: {
     _imgLoaded: function () {
-      this.imgClasses['card__img--absent'] = false;
+      this.imgClasses['card__img--loaded'] = true;
     },
   },
 });
