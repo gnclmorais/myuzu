@@ -12,5 +12,125 @@
       "height": 300,
     },
     "colour": "#fe7766",
-  }
+  },
+
+  "httptonyholmstendeviantartcomartDangerousMen629406793": {
+    "url": "http://www.deviantart.com/art/Bulls-on-Parade-625974301",
+    "modified": "2015-01-22 09:12:03 UTC",
+    "title": "Bulls on Parade",
+    "author": {
+      "name": "NanoMortis",
+    },
+    "image": "http://pre06.deviantart.net/eafc/th/pre/f/2016/217/7/2/bulls_on_parade_by_nanomortis-dacosv1.png",
+    "size": {
+      "width": 1186,
+      "height": 674,
+    },
+    "colour": "#D6494B",
+  },
+
+  "httpsdribbblecomshots2400678WhoDaresWins": {
+    "url": "https://dribbble.com/shots/2400678-Who-Dares-Wins",
+    "modified": "2015-01-22 09:12:03 UTC",
+    "title": "Who Dares Wins",
+    "author": {
+      "name": "R A D I O",
+    },
+    "image": "https://d13yacurqjgara.cloudfront.net/users/99875/screenshots/2400678/who-dares-wins.gif",
+    "size": {
+      "width": 400,
+      "height": 300,
+    },
+    "colour": "#000",
+  },
+
+  "httpsdribbblecomshots1176381DEADTHREADSV1": {
+    "url": "https://dribbble.com/shots/1176381-DEAD-THREADS-V1",
+    "modified": "2015-01-22 09:12:03 UTC",
+    "title": "DEAD THREADS : V1",
+    "author": {
+      "name": "Michael Spitz",
+    },
+    "image": "https://d13yacurqjgara.cloudfront.net/users/2790/screenshots/1176381/dead_threads_-_v1_1x.png",
+    "size": {
+      "width": 400,
+      "height": 300,
+    },
+    "colour": "#000",
+  },
+
+  "httpsdribbblecomshots1895036HeDed": {
+    "url": "https://dribbble.com/shots/1895036-He-Ded",
+    "modified": "2015-01-22 09:12:03 UTC",
+    "title": "He Ded",
+    "author": {
+      "name": "Peter Komierowski",
+    },
+    "image": "https://d13yacurqjgara.cloudfront.net/users/114736/screenshots/1895036/he-ded_1x.jpg",
+    "size": {
+      "width": 400,
+      "height": 300,
+    },
+    "colour": "#fe7766",
+  },
+
+  "httpsdribbblecomshots2848799Rogmon": {
+    "url": "https://dribbble.com/shots/2848799-Rog-mon",
+    "modified": "2015-01-22 09:12:03 UTC",
+    "title": "Rogémon",
+    "author": {
+      "name": "Rogie",
+    },
+    "image": "https://d13yacurqjgara.cloudfront.net/users/255/screenshots/2848799/avatar-rogemon_1x.png",
+    "size": {
+      "width": 400,
+      "height": 300,
+    },
+    "colour": "#D9F9C3",
+  },
+
+  "httpsdribbblecomshots2846651IChooseYou": {
+    "url": "https://dribbble.com/shots/2846651-I-Choose-You",
+    "modified": "2015-01-22 09:12:03 UTC",
+    "title": "I Choose You",
+    "author": {
+      "name": "Justin Mezzell",
+    },
+    "image": "https://d13yacurqjgara.cloudfront.net/users/13774/screenshots/2846651/ichooseyou_1x.png",
+    "size": {
+      "width": 400,
+      "height": 300,
+    },
+    "colour": "#F3D46D",
+  },
+
+  "httpsdribbblecomshots2206761TheChop": {
+    "url": "https://dribbble.com/shots/2206761-The-Chop",
+    "modified": "2015-01-22 09:12:03 UTC",
+    "title": "The Chop",
+    "author": {
+      "name": "Fraser Davidson",
+    },
+    "image": "https://d13yacurqjgara.cloudfront.net/users/31664/screenshots/2206761/chop.gif",
+    "size": {
+      "width": 400,
+      "height": 300,
+    },
+    "colour": "#DEDBD7",
+  },
+
+  "httpsdribbblecomshots1895036HeDed": {
+    "url": "http://tonyholmsten.deviantart.com/art/Dangerous-Men-629406793",
+    "modified": "2015-01-22 09:12:03 UTC",
+    "title": "Dangerous Men",
+    "author": {
+      "name": "Tonyholmsten",
+    },
+    "image": "http://img05.deviantart.net/9352/i/2016/233/1/9/dangerous_men_by_tonyholmsten-daeqde1.jpg",
+    "size": {
+      "width": 1024,
+      "height": 520,
+    },
+    "colour": "#FDF47F",
+  },
 }

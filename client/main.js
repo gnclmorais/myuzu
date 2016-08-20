@@ -15,9 +15,9 @@ var vm = new Vue({
   },
 });
 
-// $(window).on('load', function () {
-//   var msnry = new Masonry('.grid', {
-//     itemSelector: '.grid-item',
-//     fitWidth: true,
-//   });
-// });
+$(window).on('load', function () {
+  var msnry = new Masonry('.grid', {
+    itemSelector: '.grid-item',
+    fitWidth: true,
+  });
+});
