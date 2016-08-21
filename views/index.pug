@@ -3,5 +3,5 @@ extends ./_layout.pug
 block content
   main(role='main')
     .loader.loader--main
-    .grid.grid--loading
+    .grid.grid--loading(v-infinite-scroll='loadMore()' infinite-scroll-disabled='busy' infinite-scroll-distance='10')
       card(v-for='card in cards' v-bind:card='card')

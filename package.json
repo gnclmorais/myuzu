@@ -15,11 +15,12 @@
     "jquery": "^3.1.0",
     "masonry-layout": "^4.1.0",
     "morgan": "~1.6.1",
+    "nib": "^1.1.2",
     "pug": "^2.0.0-beta4",
     "serve-favicon": "~2.3.0",
     "stylus": "0.42.3",
-    "nib": "^1.1.2",
-    "vue": "^1.0.26"
+    "vue": "^1.0.26",
+    "vue-infinite-scroll": "^0.2.3"
   },
   "devDependencies": {
     "browserify": "^13.0.1",
@@ -28,8 +29,8 @@
     "watchify": "^3.7.0"
   },
   "scripts": {
-    "watch": "watchify client/main.js -o public/app.js -v",
-    "build": "browserify client/main.js -o public/app.js",
+    "watch": "watchify client/main.js -o public/javascripts/app.js -v",
+    "build": "browserify client/main.js -o public/javascripts/app.js",
     "stylus": "stylus -w stylesheets",
     "start": "npm run watch & nodemon server.js"
   },
