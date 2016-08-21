@@ -186,6 +186,7 @@ var vm = new Vue({
   el: '.grid',
 
   data: {
+    'msnry': null,
     'cards': cache.randomAsArray(),
     'busy': false,
   },
@@ -198,29 +199,33 @@ var vm = new Vue({
     'infiniteScroll': infiniteScroll,
   },
 
+  ready: function () {
+    $(window).on('load', function () {
+      this.msnry = new Masonry('.grid', {
+        itemSelector: '.card',
+        columnWidth: 400,
+        fitWidth: true,
+        transitionDuration: '0.3s',
+        initLayout: false,
+      })
+      .on('layoutComplete', function() {
+        var loading = 'grid--loading';
+        $('.' + loading).removeClass(loading);
+      })
+      .layout();
+    }.bind(this));
+  },
+
   methods: {
     'loadMore': function() {
       // Load more cards
-      // cache.randomAsArray().forEach(function (card) {
-      //   this.cards.push(card);
-      // }.bind(this));
+      cache.randomAsArray().forEach(function (card) {
+        this.cards.push(card);
+      }.bind(this));
+
+      this.msnry.reloadItems();
     },
   },
-});
-
-$(window).on('load', function () {
-  var msnry = new Masonry('.grid', {
-    itemSelector: '.card',
-    columnWidth: 400,
-    fitWidth: true,
-    transitionDuration: '0.3s',
-    initLayout: false,
-  })
-  .on('layoutComplete', function() {
-    var loading = 'grid--loading';
-    $('.' + loading).removeClass(loading);
-  })
-  .layout();
 });
 
 },{"../components/card":4,"./cache":2,"jquery":9,"masonry-layout":10,"vue":15,"vue-infinite-scroll":14}],4:[function(require,module,exports){
